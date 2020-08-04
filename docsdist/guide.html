@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Getting Started | tvl-contrast-directive</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="vue custom directive checking the contrast ratio">
+    <link rel="preload" href="/assets/css/0.styles.4093f4aa.css" as="style"><link rel="preload" href="/assets/js/app.b73cffe7.js" as="script"><link rel="preload" href="/assets/js/2.94ec4b60.js" as="script"><link rel="preload" href="/assets/js/11.749532fe.js" as="script"><link rel="prefetch" href="/assets/js/10.78625989.js"><link rel="prefetch" href="/assets/js/3.bd71f7c8.js"><link rel="prefetch" href="/assets/js/4.fa182bed.js"><link rel="prefetch" href="/assets/js/5.967c0646.js"><link rel="prefetch" href="/assets/js/6.64ab93b3.js"><link rel="prefetch" href="/assets/js/7.cf3ac765.js"><link rel="prefetch" href="/assets/js/8.b94e8f44.js"><link rel="prefetch" href="/assets/js/9.e9f5da2f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4093f4aa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">tvl-contrast-directive</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Getting Started
+</a></div><div class="nav-item"><a href="/components/" class="nav-link">
+  Demo
+</a></div><div class="nav-item"><a href="https://github.com/gintomikCZ/tvl-contrast-directive" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Getting Started
+</a></div><div class="nav-item"><a href="/components/" class="nav-link">
+  Demo
+</a></div><div class="nav-item"><a href="https://github.com/gintomikCZ/tvl-contrast-directive" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="getting-started"><a href="#getting-started" class="header-anchor">#</a> Getting Started</h1> <h3 id="installation"><a href="#installation" class="header-anchor">#</a> installation</h3> <p>you can install the directive using npm:</p> <div class="language- extra-class"><pre class="language-text"><code>npm install tvl-contrast-directive --save-dev
+</code></pre></div><p>After installation the directive has to be registered or globaly in your vue application, or localy in a specific SFC (single file component).</p> <h3 id="global-registration"><a href="#global-registration" class="header-anchor">#</a> global registration</h3> <p>modify your main.js adding the global directive registration:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> TvlContrastDirective <span class="token keyword">from</span> <span class="token string">'tvl-contrast-directive'</span>
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">'contrast'</span><span class="token punctuation">,</span> TvlContrastDirective<span class="token punctuation">)</span>
+
+<span class="token comment">// ... the rest of code here</span>
+</code></pre></div><h3 id="local-registration"><a href="#local-registration" class="header-anchor">#</a> local registration</h3> <p>Import the directive from the npm package and add <code>directives</code> option into the configuration object in your SFC:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> TvlContrastDirective <span class="token keyword">from</span> <span class="token string">'tvl-contrast-directive'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'myComponent'</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  directives<span class="token operator">:</span> <span class="token punctuation">{</span>
+    contrast<span class="token operator">:</span> TvlContrastDirective
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="usage"><a href="#usage" class="header-anchor">#</a> usage</h3> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><strong>don't use in production.</strong><br>
+The directive was written as a developer's helping tool and it is supposed to be used in development only.</p></div> <p>Once the directive is registered, it can be set in a HTML element or a vue component as <code>v-contrast</code>:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-contrast</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>I am a container div.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="functionality"><a href="#functionality" class="header-anchor">#</a> functionality</h3> <ul><li>The directive shows the contrast ratio of the HTML element. It can be helpful in development, if you need to check quickly the contrast on a component, especially when the colors are set dynamically.</li> <li>The contrast ratio is calculated according to the WCAG 2.0 and 2.1 standards.</li> <li>The directive appends an information sheet below the element. It shows the contrast ratio value and a short text saying that the contrast meets the WCAG criteria or that it doesn't. If the calculation fails for any reason this information sheet contains an error message.</li> <li>Two values are used in the contrast ratio calculation - <code>background-color</code> and <code>color</code> css properties. If any of these values is not set on the element itself, then the inherited value of the closest ancestor applies on the element. The directive finds the closest defined ancestor's value if this is a case.</li> <li>The closest exactly defined ancestor's value is used also if the element's background collor is set to <code>transparent</code> / <code>rgba(0, 0, 0, 0)</code>.</li> <li>The information sheet displayed below the element doesn't offer any hiding, closing, removing functionality. It can not be removed. It remains visible as long as the element remains in the DOM. This can help not to forget to remove the directive out of the element before building for production 😃.</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b73cffe7.js" defer></script><script src="/assets/js/2.94ec4b60.js" defer></script><script src="/assets/js/11.749532fe.js" defer></script>
+  </body>
+</html>
