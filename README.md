@@ -1,24 +1,4 @@
 # tvl-contrast-directive
 
-## Project setup
-```
-npm install
-```
+see demo and docs here: https://gintomikcz.github.io/tvl-contrast-directive/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
